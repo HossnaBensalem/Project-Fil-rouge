@@ -1,1 +1,18 @@
-Node: 18_apline
+# Étape 1 : choisir une image Node.js
+FROM node:18
+
+# Étape 2 : définir le dossier de travail
+WORKDIR /app
+
+# Étape 3 : copier package.json et installer les dépendances
+COPY package*.json ./
+RUN npm install
+
+# Étape 4 : copier le reste du backend
+COPY . .
+
+# Étape 5 : exposer le port
+EXPOSE 5000
+
+# Étape 6 : démarrer le serveur
+CMD ["npm", "start"]

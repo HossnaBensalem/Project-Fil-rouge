@@ -14,12 +14,12 @@ const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/atelier')
+    await mongoose.connect('mongodb://127.0.0.1:27017/dataatelier')
     .then(() => {
-      console.log(`✅ MongoDB Connected`);
+      console.log(` MongoDB Connected`);
     })
   } catch (error) {
-    console.error('❌ Database connection error:', error.message);
+    console.error(' Database connection error:', error.message);
     process.exit(1);
   }
 };
@@ -46,6 +46,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌐 API URL: http://localhost:${PORT}`);
+  console.log(` Server running on port ${PORT}`);
+  console.log(` API URL: http://localhost:${PORT}`);
 });

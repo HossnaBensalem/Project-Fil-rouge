@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/atelier')
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/dataatelier')
     .then(() => {
-      console.log(`✅ MongoDB Connected`);
+      console.log(` MongoDB Connected`);
     })
   } catch (error) {
     console.error('Database connection error:', error.message);
