@@ -36,7 +36,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="bg-white py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-light text-primary mb-6">
+              <h1 className="text-6xl md:text-8xl font-bold text-black mb-8 animate-fade-in">
             ATELIER
           </h1>
           <p className="text-xl text-secondary mb-8 max-w-2xl mx-auto">
